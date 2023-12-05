@@ -15,8 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Projects\ASP NET Office Management\ManagementSystem\ManagementSystem
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Projects/ASP NET Office Management/ManagementSystem/ManagementSystem/Pages/Calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FsZW5kYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projects/ASP NET Office Management/ManagementSystem/ManagementSystem/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projects/ASP NET Office Management/ManagementSystem/ManagementSystem/Pages/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRkFRLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Projects/ASP NET Office Management/ManagementSystem/ManagementSystem/Pages/Index.cshtml]
