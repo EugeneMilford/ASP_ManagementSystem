@@ -1,0 +1,132 @@
+﻿@page
+@model ManagementSystem.Pages.StaffMembers.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Staff</h1>
+                    <p>
+                        <a asp-page="/StaffMembers/Create">Create New</a>
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a asp-page="/Index">Home</a></li>
+                        <li class="breadcrumb-item active">Staff Members</li>
+                    </ol>
+                </div>
+                </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Staff Members</h3>
+                            <div class="card-tools">
+                                <div class="input-group input-group-sm" style="width: 150px;">
+                                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button type="submit" class="btn btn-default">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-hover text-nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].Name)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].Surname)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].Gender)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].Department)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].PhoneNumber)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].EmailAddress)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].DateOfBirth)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].Address)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Staff[0].DateJoined)
+                                         </th>
+                                         <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Staff) {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Name)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Surname)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Gender)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Department)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.EmailAddress)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DateOfBirth)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Address)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.DateJoined)
+                                        </td>
+                                        <td>
+                                            <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                                            <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                                            <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                                        </td>
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
