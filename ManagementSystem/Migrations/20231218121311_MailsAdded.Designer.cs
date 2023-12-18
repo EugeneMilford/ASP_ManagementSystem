@@ -3,6 +3,7 @@ using System;
 using ManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ManagementSystem.Migrations
 {
     [DbContext(typeof(ManagementContext))]
-    partial class ManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20231218121311_MailsAdded")]
+    partial class MailsAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.25");
@@ -136,38 +138,6 @@ namespace ManagementSystem.Migrations
                     b.HasKey("MessageId");
 
                     b.ToTable("message", (string)null);
-                });
-
-            modelBuilder.Entity("ManagementSystem.Models.Profile", b =>
-                {
-                    b.Property<int>("ProfileId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("DateJoined")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Education")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Experience")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Location")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ProfileDescription")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ProfileName")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ProfileId");
-
-                    b.ToTable("profile", (string)null);
                 });
 
             modelBuilder.Entity("ManagementSystem.Models.Project", b =>
